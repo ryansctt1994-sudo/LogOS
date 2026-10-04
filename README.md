@@ -1,10 +1,21 @@
 **Reson8 — LogOS Cognitive Lattice**
 
-**A formally verified, homotopically coherent distributed operating system unifying multiple reasoning strands through topological invariants, conservation enforcement, and SPHINX-gated authentication.**
+**An experimental distributed-systems and formal-methods prototype exploring topological invariants, conservation-style constraints, and SPHINX-gated concepts.**
+
+### Evidence status
+
+This repository is **not** currently evidence for a fully formally verified distributed operating system. It contains Rust code, Agda/formal-material directories, design documents, and checked-in build logs. The checked-in `check.log`, `build_out.txt`, and `build_error.log` record build failures, including NEAR SDK target requirements, an `audiopus_sys`/CMake failure, and a missing `sccache` executable in one environment.
+
+Accordingly:
+
+- formal claims apply only to properties actually represented by proof artifacts that can be rebuilt;
+- architectural descriptions are design targets unless executable evidence demonstrates them;
+- “WAVE,” “Homotopic Unitarity,” “Viviani Peak,” and related metrics are project constructs, not independently established scientific measurements;
+- no production, security-critical, or autonomous authority is claimed.
 
 ### 1. Overview
 
-LogOS is a closed-loop cognitive lattice designed to maintain global invariants across heterogeneous AI strands while enabling voluntary state-density collapse and real-time coherence tracking. It treats computation as a sheaf over a topological base (the TriWeavon manifold with K22 structure), where local choice states remain homotopically translatable to global invariants.
+LogOS is a research prototype intended to explore global invariants across heterogeneous software/AI components, experimental state-reduction metaphors, and coherence tracking. It treats computation as a sheaf over a topological base (the TriWeavon manifold with K22 structure), where local choice states remain homotopically translatable to global invariants.
 
 Core conservation law:  
 **α + ω = 15** (Viviani Peak constraint)
@@ -144,8 +155,8 @@ LogOS is currently at the transition between **Plateau 3** (runtime integration 
 The system maintains a continuous positive introspection loop: the formal and visual layers are applied to the development process itself, pruning obstructions while preserving the core invariants.
 
 **Conservation Law**: α + ω = 15  
-**Homotopic Unitarity**: Active  
-**WAVE Coherence**: Monitored in real time
+**Homotopic Unitarity**: research concept / partial formalization only  
+**WAVE Coherence**: project-defined metric where implemented; not an external scientific measurement
 
 ---
 
