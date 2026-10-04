@@ -4,6 +4,9 @@
 
 ### Evidence status
 
+See [`EVIDENCE_STATUS.md`](EVIDENCE_STATUS.md) for the property-scoped evidence matrix and promotion rules.
+
+
 This repository is **not** currently evidence for a fully formally verified distributed operating system. It contains Rust code, Agda/formal-material directories, design documents, and checked-in build logs. The checked-in `check.log`, `build_out.txt`, and `build_error.log` record build failures, including NEAR SDK target requirements, an `audiopus_sys`/CMake failure, and a missing `sccache` executable in one environment.
 
 Accordingly:
