@@ -71,12 +71,9 @@ LogOS is built on a **Grothendieck ∞-topos** semantics in which:
 - Higher paths realize **Homotopic Unitarity** between different resolution strategies and kernel implementations.
 - Global invariants (contraction bounds, vanishing resilience) are preserved under univalent identification.
 
-A Lean 4 formalization of the core **Choice Object** has been developed, including:
-- Structure carrying geometric representation, scaling function, and invariant map.
-- `uaChoice` operation turning equivalences into paths via univalence.
-- Machine-checked preservation of contraction bounds under Heisenberg scaling.
+An **Agda/Cubical** formal-method layer exists under `agda/`, with `agda/src/Everything.agda` as its aggregate type-check entry point and TriWeavon modules under `agda/src/TriWeavon/`. The repository also contains broader exploratory Agda modules.
 
-This formal layer feeds directly into runtime proof metadata exposed via the 9P2000.L interface.
+This audit did not find a current CI receipt or checked-in successful Agda type-check log for the present commit. Accordingly, the existence of formal source is claimed; whole-system machine verification and runtime coupling to that formal layer are not.
 
 ### 5. Runtime Components
 
@@ -86,11 +83,11 @@ Maintains oscillator-driven logical time and continuously refreshes coherence me
 **9P2000.L VFS**  
 Exposes:
 - `/.triweavon/coherence/` — Real-time WAVE, stretch, surge, and Betti metrics
-- `/.triweavon/proof/` — Lean4 proof hashes, contraction bounds, and verification status
+- `/.triweavon/proof/` — intended formal-proof metadata surface; verify the producing runtime before treating entries as proof receipts
 - Crate.NFT special files for MeaningSeed and oscillator globals
 
 **SPHINX Gate**  
-Evaluates Jones polynomial at \( t = e^{2\pi i / 5} \) for all privileged operations. Integrates with the Lean4 formal layer for invariant-checked authorization.
+Evaluates Jones polynomial at \( t = e^{2\pi i / 5} \) for all privileged operations. Runtime integration with the formal layer is a design target; the current repository does not establish an end-to-end proof-carrying authorization path.
 
 ### 6. Key Crates and Services
 
@@ -105,7 +102,7 @@ Evaluates Jones polynomial at \( t = e^{2\pi i / 5} \) for all privileged operat
 - `crates/styx` — 9P2000.L WebSocket bridge
 - `crates/wave` — WAVE coherence scoring
 - `crates/reson8-topology` — Topological invariants and Rezk-style completion support
-- `lean/TriWeavon/` — Lean4 formalization of Choice Object and homotopic translatability
+- `agda/src/TriWeavon/` — Agda/Cubical TriWeavon formal-method modules
 
 **Applications**
 - `apps/triweave` — Unified deployer, SAIF onboarding, vault management, and TUI
