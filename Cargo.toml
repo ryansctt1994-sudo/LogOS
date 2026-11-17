@@ -1,8 +1,5 @@
 [workspace]
 members = [
-    "crates/resonance-invariant",
-    "crates/styx-vfs-layer",
-    "crates/coherence-mcp",
     "cutiles/cutile",
     "crates/triweavon-cudarc",
 ]
